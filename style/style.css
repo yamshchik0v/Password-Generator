@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ------------------------------ */
 header {
-  background-color: #3B3B98;
+  background-color: #3b3b3b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,8 +85,8 @@ header {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-shadow: 0 3px 5px #2d64a3;
-          box-shadow: 0 3px 5px #2d64a3;
+  -webkit-box-shadow: 0 3px 5px #494444;
+          box-shadow: 0 3px 5px #494444;
   width: 100%;
 }
 
@@ -182,7 +182,7 @@ header .navbar .navbar__links a {
 
 header .navbar .navbar__links a:hover {
   color: #4d93ee;
-  background-color: #3B3B98;
+  background-color: #4d4d4d;
   -webkit-transition: .25s ease-in;
   transition: .25s ease-in;
 }
@@ -225,7 +225,7 @@ header .navbar .navbar__links a:hover {
     display: block;
   }
   header .navbar .navbar__links .navbar__links-list {
-    background-color: #3B3B98;
+    background-color: #3b3b3b;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -252,7 +252,7 @@ header .navbar .navbar__links a:hover {
     opacity: 0;
   }
   header .navbar .navbar__links .navbar__links-list.active {
-    background-color: #4d93ee;
+    background-color: #3b3b3b;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -289,7 +289,7 @@ header .navbar .navbar__links a:hover {
 
 html, body {
   overflow: hidden;
-  background-color: #c2c2ff;
+  background-color: #c2c1f0;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 16px;
 }
@@ -310,11 +310,11 @@ html, body {
 }
 
 .pg-container {
-  background-color: #3B3B98;
+  background-color: #3b3b3b;
   width: 350px;
   padding: 1.5rem;
-  -webkit-box-shadow: 0 0 7px #2d64a3;
-          box-shadow: 0 0 7px #2d64a3;
+  -webkit-box-shadow: 0 0 7px #999999;
+          box-shadow: 0 0 7px #999999;
 }
 
 .pg-output {
@@ -331,14 +331,15 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  background-color: #202052;
+  background-color: #1c1c1d;
   padding: 0.4rem;
-  -webkit-box-shadow: 0 0 5px #4d93ee;
-          box-shadow: 0 0 5px #4d93ee;
+  -webkit-box-shadow: 0 0 5px #999999;
+          box-shadow: 0 0 5px #999999;
 }
 
 .pg-password {
   position: relative;
+  height: 1em;
 }
 
 .pg-output--copyBtn {
@@ -351,6 +352,12 @@ html, body {
   background-color: #4d93ee;
   cursor: pointer;
   border-radius: 0.2rem;
+}
+
+.pg-output--copyBtn:active {
+  background-color: #abccf7;
+  -webkit-transform: scale(90%);
+          transform: scale(90%);
 }
 
 .pg-output--copyBtn img {
@@ -377,7 +384,7 @@ html, body {
 .form-control input[type="number"] {
   width: 3em;
   color: #e2e2e2;
-  background-color: #202052;
+  background-color: #1c1c1d;
   padding: 2px;
 }
 
@@ -401,10 +408,17 @@ html, body {
   letter-spacing: 0;
   padding: 0.6rem 1.5rem;
   color: #e2e2e2;
-  background-color: #202052;
-  -webkit-box-shadow: 0 0 5px #4d93ee;
-          box-shadow: 0 0 5px #4d93ee;
+  background-color: #1c1c1d;
+  -webkit-box-shadow: 0 0 5px #999999;
+          box-shadow: 0 0 5px #999999;
   cursor: pointer;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.generate-btn:hover {
+  background-color: #4d4d4d;
+  color: #4d93ee;
 }
 
 .generate-btn:active {

@@ -4,12 +4,12 @@
 header {
 
    // padding: 1rem 0.3rem;
-   background-color: #3B3B98;
+   background-color: $bg_navbar;
    display: flex;
    justify-content: space-around;
    align-items: center;
    flex-wrap: wrap;
-   box-shadow: 0 3px 5px #2d64a3;
+   box-shadow: 0 3px 5px $box_shadow;
    width: 100%;
 
 
@@ -86,8 +86,8 @@ header {
          color: $text;
          transition: color 200ms ease, background-color 200ms ease-out;
             &:hover{
-               color: rgb(77, 147, 238);
-               background-color: #3B3B98;
+               color: $text_hover;
+               background-color: $button_hover_bg;
                transition: .25s ease-in;
             }
       }   
@@ -141,7 +141,7 @@ header {
       .navbar__links {
          
          .navbar__links-list {
-            background-color: #3B3B98;
+            background-color: $bg_navbar;
             width: 100%;
             display: flex;
             flex-flow: column;
