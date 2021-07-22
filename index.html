@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style/style.css">
+   <title>Random Password Generator</title>
+</head>
+
+<body>
+   <header>
+      <div class="logo">
+         <h1>Password Generator</h1>
+      </div>
+      <a href="#" class="toggle-button">
+         <span class="bar line1"></span>
+         <span class="bar line2"></span>
+         <span class="bar line3"></span>
+      </a>
+      <nav class="navbar">
+
+
+         <div class="navbar__links">
+            <ul class="navbar__links-list">
+               <li><a href="#">Links</a></li>
+               <li><a href="#">Other projects</a></li>
+            </ul>
+         </div>
+      </nav>
+
+
+   </header>
+   <div class="content">
+      <div class="pg-container">
+         <div class="pg-output">
+            <div class="pg-password">password</div>
+            <button class="pg-output--copyBtn"><img src="/images/copy.png" alt="copy"></button>
+         </div>
+         <div class="pg-body">
+
+            <div class="form-control">
+               <label for="Length">Password Length</label>
+               <input type="number" id="length" value="4" min="4" max="25">
+            </div>
+
+            <div class="form-control">
+               <label for="lower">Lowercase Letters</label>
+               <input type="checkbox" id="lower" checked>
+            </div>
+
+            <div class="form-control">
+               <label for="upper">Uppercase Letters</label>
+               <input type="checkbox" id="upper" checked>
+            </div>
+
+            <div class="form-control">
+               <label for="number">Numbers</label>
+               <input type="checkbox" id="number" checked>
+            </div>
+
+            <div class="form-control">
+               <label for="symbol">Symbols</label>
+               <input type="checkbox" id="symbol" checked>
+            </div>
+
+            <div class="pg-generate">
+               <button class="generate-btn">Generate</button>
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+   <script src="script/script.js"></script>
+</body>
+
+</html>
