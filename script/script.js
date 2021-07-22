@@ -1,3 +1,10 @@
+// * add pop-up text 'password copied'
+// * decrease font-size of output if it has more than 16 symbols
+//  and also make it lower if output has more than 21 symbols
+
+
+
+
 
 // Navbar
 
@@ -47,8 +54,21 @@ generateButtonElement.addEventListener('click', () => {
 })
 
 copyButtonElement.addEventListener('click', () => {
-   output.select();
+
+   const password = output.innerText;
+   const textarea = document.createElement('textarea');
+
+   if (!password) {
+      return
+   }
+
+   document.body.appendChild(textarea);
+   textarea.value = output.innerText;
+   textarea.select();
    document.execCommand('copy');
+   document.body.removeChild(textarea)
+   alert(`password copied: ${password}`)
+
 })
 
 // Generator
@@ -58,31 +78,29 @@ function generatePassword(lowers, uppers, numbers, symbols, length) {
    let howMuchTypes = lowers + uppers + numbers + symbols;
    // console.log(`how much types: ${howMuchTypes}`);
 
-   if (howMuchTypes === 0) {
+
+   if (howMuchTypes === 0 || length > 25) {
       return generatedPassword
    }
-
-
+   if (length >= 12 && length <= 17) {
+      output.style.fontSize = '1.3rem';
+   } else if (length >= 18) {
+      output.style.fontSize = '0.9rem';
+   } else
+      output.style.fontSize = '1.5rem';
 
    const checkedConditions = conditionChecker(lowers, uppers, numbers, symbols);
-   // console.log('checked conditions: ', checkedConditions)
 
    for (let i = 0; i < length; i++) {
-      console.log(randomOperation(checkedConditions)())
+
       generatedPassword += randomOperation(checkedConditions)();
    }
+
+   console.log(generatedPassword.length >= 16, generatedPassword.length)
+
    return generatedPassword
-
-
 }
 
-// const types = [
-//    { lowers },
-//    { uppers },
-//    { numbers },
-//    { symbols }
-// ];
-// console.log('checked types:', types);
 
 // Supporting functions
 function conditionChecker(low, up, num, symb) {

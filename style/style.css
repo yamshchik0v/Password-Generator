@@ -339,7 +339,8 @@ html, body {
 
 .pg-password {
   position: relative;
-  height: 1em;
+  height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .pg-output--copyBtn {

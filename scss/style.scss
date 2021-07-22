@@ -21,11 +21,11 @@ html, body {
    color: $text;
 }
 .pg-container {
-   background-color: #3B3B98;
+   background-color: $bg_navbar;
    width: 350px;
    padding: 1.5rem;
    // border-radius: 0.4rem;
-   box-shadow: 0 0 7px #2d64a3;
+   box-shadow: 0 0 7px $box_shadow_pg;
    
 }
 .pg-output {
@@ -37,14 +37,15 @@ html, body {
    margin: 0 auto;
    background-color: $bg_pass_fields;
    padding: 0.4rem;
-   box-shadow: 0 0 5px rgb(77, 147, 238);
+   box-shadow: 0 0 5px $box_shadow_pg;
    // border-radius: 0.2rem;
 
 
 }
 .pg-password {
    position: relative;
-  
+   height: 1.5rem;
+   line-height: 1.5rem; 
 }
 .pg-output--copyBtn {
    position: absolute;
@@ -53,9 +54,13 @@ html, body {
    width: 20px;
    height: 60%;
    overflow: hidden;
-   background-color:#4d93ee;
+   background-color:$text_hover;
    cursor: pointer;
    border-radius: 0.2rem;
+   &:active {
+      background-color: hsl(214, 83%, 82%);
+      transform: scale(90%);
+   }
    & img {
       width: 100%;
       height: 100%;
@@ -99,9 +104,14 @@ html, body {
    // border-radius: 0.2rem;
    color: $text;
    background-color: $bg_pass_fields;
-   box-shadow: 0 0 5px #4d93ee;
+   box-shadow: 0 0 5px $box_shadow_pg;
 
-      cursor: pointer;
+   cursor: pointer;
+   &:hover {
+      background-color: $button_hover_bg;
+      color: $text_hover;
+   }
+   transition: .15s ease-in;
    &:active {
       transform: scale(95%);
    }
