@@ -287,11 +287,136 @@ header .navbar .navbar__links a:hover {
   }
 }
 
+.notification {
+  position: absolute;
+  font-size: 1rem;
+  display: block;
+  top: 100px;
+  right: 10px;
+  color: #4d93ee;
+  background-color: #3b3b3b80;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: .3rem 0 0 .3rem;
+  font-weight: 500;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.notification::after {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #4d93ee;
+}
+
+.notification.show {
+  display: block;
+  -webkit-animation: show 500ms ease-in;
+          animation: show 500ms ease-in;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.notification.hide {
+  -webkit-animation: hide 500ms ease-in;
+          animation: hide 500ms ease-in;
+}
+
+.alert {
+  position: absolute;
+  font-size: 1rem;
+  display: block;
+  top: 100px;
+  right: 10px;
+  color: #ff8352;
+  background-color: #3b3b3b80;
+  padding: 1rem;
+  overflow: hidden;
+  border-radius: .3rem 0 0 .3rem;
+  font-weight: 500;
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.alert::after {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #ff8352;
+}
+
+.alert.show {
+  display: block;
+  -webkit-animation: show 500ms ease-in;
+          animation: show 500ms ease-in;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.alert.hide {
+  -webkit-animation: hide 500ms ease-in;
+          animation: hide 500ms ease-in;
+}
+
+@-webkit-keyframes show {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+
+@keyframes hide {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+
 html, body {
   overflow: hidden;
   background-color: #c2c1f0;
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 16px;
+  position: relative;
 }
 
 .content {

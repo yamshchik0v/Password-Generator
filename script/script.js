@@ -33,7 +33,8 @@ const symbolsElement = document.querySelector('#symbol');
 
 // - - - - - - - - - - - - -
 
-// Event Listeners for buttons (generate and copy to clipboard)
+// Event Listeners for buttons
+// Generate password by clicking GENERATE button
 
 generateButtonElement.addEventListener('click', () => {
 
@@ -53,41 +54,100 @@ generateButtonElement.addEventListener('click', () => {
 
 })
 
+// Copy to clipboard function
 copyButtonElement.addEventListener('click', () => {
 
    const password = output.innerText;
    const textarea = document.createElement('textarea');
 
    if (!password) {
+      createAlert();
       return
    }
-
+   createNotification()
    document.body.appendChild(textarea);
    textarea.value = output.innerText;
    textarea.select();
    document.execCommand('copy');
-   document.body.removeChild(textarea)
-   alert(`password copied: ${password}`)
+   document.body.removeChild(textarea);
+
 
 })
+// functions that create new notification div and shows it
+// alert notification
+function createAlert() {
+   const div = document.createElement('div');
+   document.body.appendChild(div);
+   div.innerText = 'Nothing to copy :(';
+   div.classList.add('alert', 'show');
+   setTimeout(() => {
+      div.classList.remove('show');
+      div.classList.add('hide');
+
+   }, 3000);
+   setTimeout(() => {
+      document.body.removeChild(div);
+
+   }, 4000);
+}
+
+// copy notification
+function createNotification() {
+   const div = document.createElement('div');
+   document.body.appendChild(div);
+   div.innerText = 'Password has been copied!';
+   div.classList.add('notification', 'show');
+   setTimeout(() => {
+      div.classList.remove('show');
+      div.classList.add('hide');
+
+   }, 3000);
+   setTimeout(() => {
+      document.body.removeChild(div);
+
+   }, 4000);
+}
+// This function makes notification that we have been copied the password
+
+function notificationProcess() {
+   const notification = document.querySelector('.notification');
+   notification.classList.remove('hide');
+   notification.classList.add('show');
+   console.log('show')
+
+   setTimeout(() => {
+      notification.classList.remove('show');
+      notification.classList.add('hide');
+      console.log('hide')
+
+   }, 3500);
+
+
+}
+
+// Check length of password and fix font-size by clicking GENERATE button
+
+generateButtonElement.addEventListener('click', () => {
+   const length = lengthElement.value;
+   if (length >= 13 && length <= 18) {
+      output.style.fontSize = '1.3rem';
+   } else if (length >= 19) {
+      output.style.fontSize = '0.9rem';
+   } else
+      output.style.fontSize = '1.5rem';
+})
+
+
 
 // Generator
 function generatePassword(lowers, uppers, numbers, symbols, length) {
    let generatedPassword = '';
 
    let howMuchTypes = lowers + uppers + numbers + symbols;
-   // console.log(`how much types: ${howMuchTypes}`);
-
 
    if (howMuchTypes === 0 || length > 25) {
       return generatedPassword
    }
-   if (length >= 12 && length <= 17) {
-      output.style.fontSize = '1.3rem';
-   } else if (length >= 18) {
-      output.style.fontSize = '0.9rem';
-   } else
-      output.style.fontSize = '1.5rem';
 
    const checkedConditions = conditionChecker(lowers, uppers, numbers, symbols);
 
@@ -96,13 +156,16 @@ function generatePassword(lowers, uppers, numbers, symbols, length) {
       generatedPassword += randomOperation(checkedConditions)();
    }
 
-   console.log(generatedPassword.length >= 16, generatedPassword.length)
+   // console.log(generatedPassword.length >= 16, generatedPassword.length)
 
    return generatedPassword
 }
 
+// - - - - - - - - - - - - -
 
-// Supporting functions
+
+// * * * Supporting functions * * *
+// Checkbox checker
 function conditionChecker(low, up, num, symb) {
    const checkedConditions = [];
    if (low) checkedConditions.push(getRandomLower);
