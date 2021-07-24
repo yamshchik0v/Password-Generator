@@ -6,13 +6,14 @@
    display: block;
    top: 100px;
    right: 10px;
-   color: $text_hover;
+   color: $notification;
    background-color: #3b3b3b80;
    padding: 1rem;
    overflow: hidden;
    border-radius: .3rem 0 0 .3rem;
    font-weight: 500;
    transform: translateX(120%);
+
 
    &::after {
       content: '';
@@ -22,7 +23,7 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      background-color: $text_hover;
+      background-color: $notification;
    }
 
    &.show {
@@ -43,7 +44,7 @@
    display: block;
    top: 100px;
    right: 10px;
-   color: #ff8352;
+   color: $alert;
    background-color: #3b3b3b80;
    padding: 1rem;
    overflow: hidden;
@@ -59,7 +60,7 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      background-color: #ff8352;
+      background-color: $alert;
    }
 
    &.show {

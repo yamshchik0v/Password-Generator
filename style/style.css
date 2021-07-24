@@ -181,7 +181,7 @@ header .navbar .navbar__links a {
 }
 
 header .navbar .navbar__links a:hover {
-  color: #4d93ee;
+  color: #54b5f5;
   background-color: #4d4d4d;
   -webkit-transition: .25s ease-in;
   transition: .25s ease-in;
@@ -293,7 +293,7 @@ header .navbar .navbar__links a:hover {
   display: block;
   top: 100px;
   right: 10px;
-  color: #4d93ee;
+  color: #4bee7c;
   background-color: #3b3b3b80;
   padding: 1rem;
   overflow: hidden;
@@ -311,7 +311,7 @@ header .navbar .navbar__links a:hover {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #4d93ee;
+  background-color: #4bee7c;
 }
 
 .notification.show {
@@ -475,7 +475,7 @@ html, body {
   width: 20px;
   height: 60%;
   overflow: hidden;
-  background-color: #4d93ee;
+  background-color: #54b5f5;
   cursor: pointer;
   border-radius: 0.2rem;
 }
@@ -544,7 +544,7 @@ html, body {
 
 .generate-btn:hover {
   background-color: #4d4d4d;
-  color: #4d93ee;
+  color: #54b5f5;
 }
 
 .generate-btn:active {

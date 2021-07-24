@@ -1,11 +1,3 @@
-// * add pop-up text 'password copied'
-// * decrease font-size of output if it has more than 16 symbols
-//  and also make it lower if output has more than 21 symbols
-
-
-
-
-
 // Navbar
 
 const toggle = document.querySelector('.toggle-button');
