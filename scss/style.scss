@@ -2,32 +2,37 @@
 @import "_header";
 @import "_variables";
 @import "_notifications";
-
+@import "_footer";
 
 html, body {
+   font-size: 16px;
+}
+
+body {
    overflow: hidden;
    background-color: $bg_body;
-   // background-color: hsl(47, 59%, 41%);
    font-family: 'Montserrat', Arial, sans-serif;
-   font-size: 16px;
-   position: relative;
+
 }
 
 .content{
-   min-width: 100vw;
-   min-height: 100vh;
+   min-width: 100%;
+   height: 70vh;
+   color: $text;
    display: flex;
    justify-content: center;
    align-items: center;
-   color: $text;
+   // margin-bottom: -6rem;
+
+   
 }
 .pg-container {
+   // margin: 0 auto;
    background-color: $bg_navbar;
    width: 350px;
    padding: 1.5rem;
-   // border-radius: 0.4rem;
    box-shadow: 0 0 7px $box_shadow_pg;
-   
+   // transform: translateY(-25%);
 }
 .pg-output {
    font-size: 1.5rem;
@@ -44,7 +49,6 @@ html, body {
 
 }
 .pg-password {
-   position: relative;
    height: 1.5rem;
    line-height: 1.5rem; 
 }

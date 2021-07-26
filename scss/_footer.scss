@@ -1,0 +1,24 @@
+@import '_variables';
+
+footer {
+   position: absolute;
+   bottom: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 1.5rem;
+   min-width: 100%;
+   margin: 0 0 0 0;
+   background-color: $bg_navbar;
+   
+   
+   h2 {
+      position: relative;
+      line-height: 1;
+      color: $text;
+      // color: red;
+      font-size: 0.7rem;
+      margin: .3rem;
+   }
+}
+
