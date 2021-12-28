@@ -10,8 +10,6 @@
 </head>
 
 <body>
-   <!--* * * header * * *-->
-
    <header>
       <div class="logo">
          <h1>Password Generator</h1>
@@ -32,14 +30,20 @@
          </div>
       </nav>
    </header>
-   <!--* * * content * * *-->
-
    <div class="content">
       <div class="pg-container">
          <div class="pg-output">
             <div class="pg-password"></div>
-            <button class="pg-output--copyBtn"><img src="/images/copy.png" alt="copy"
-                  title="Copy to clipboard"></button>
+            <button class="pg-output--copyBtn">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                  <g id="Layer_100" data-name="Layer 100">
+                     <path
+                        d="M44.84,10.5H24.9a5,5,0,0,0-5,5V42.8a5,5,0,0,0,5,5H44.84a5,5,0,0,0,5-5V15.46A5,5,0,0,0,44.84,10.5Zm2,32.3a2,2,0,0,1-2,2H24.9a2,2,0,0,1-2-2V15.46a2,2,0,0,1,2-2H44.84a2,2,0,0,1,2,2Z" />
+                     <path
+                        d="M39.07,50.5H19.18a2,2,0,0,1-2-2V21.23a1.5,1.5,0,0,0-3,0V48.51a5,5,0,0,0,5,5H39.07A1.5,1.5,0,0,0,39.07,50.5Z" />
+                  </g>
+               </svg>
+            </button>
          </div>
          <div class="pg-body">
 
@@ -50,22 +54,46 @@
 
             <div class="form-control">
                <label for="lower">Lowercase Letters</label>
-               <input type="checkbox" id="lower" checked>
+               <input type="checkbox" class="checkbox" id="lower" checked>
             </div>
 
             <div class="form-control">
                <label for="upper">Uppercase Letters</label>
-               <input type="checkbox" id="upper" checked>
+               <input type="checkbox" class="checkbox" id="upper" checked>
             </div>
 
             <div class="form-control">
                <label for="number">Numbers</label>
-               <input type="checkbox" id="number" checked>
+               <input type="checkbox" class="checkbox" id="number" checked>
             </div>
 
             <div class="form-control">
                <label for="symbol">Symbols</label>
-               <input type="checkbox" id="symbol" checked>
+               <input type="checkbox" class="checkbox" id="symbol" checked>
+            </div>
+
+            <div class="form-control">
+               <label for="clear">Clear all fields</label>
+               <button id="clear" class="clear">
+                  <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Rounded" transform="translate(-615.000000, -1487.000000)">
+                           <g id="Content" transform="translate(100.000000, 1428.000000)">
+                              <g id="-Round-/-Content-/-clear" transform="translate(510.000000, 54.000000)">
+                                 <g>
+                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                    <path
+                                       d="M18.3,5.71 C17.91,5.32 17.28,5.32 16.89,5.71 L12,10.59 L7.11,5.7 C6.72,5.31 6.09,5.31 5.7,5.7 C5.31,6.09 5.31,6.72 5.7,7.11 L10.59,12 L5.7,16.89 C5.31,17.28 5.31,17.91 5.7,18.3 C6.09,18.69 6.72,18.69 7.11,18.3 L12,13.41 L16.89,18.3 C17.28,18.69 17.91,18.69 18.3,18.3 C18.69,17.91 18.69,17.28 18.3,16.89 L13.41,12 L18.3,7.11 C18.68,6.73 18.68,6.09 18.3,5.71 Z"
+                                       id="🔹Icon-Color" fill="black"></path>
+                                 </g>
+                              </g>
+                           </g>
+                        </g>
+                     </g>
+                  </svg>
+               </button>
             </div>
 
             <div class="pg-generate">
@@ -78,7 +106,6 @@
 
    </div>
 
-   <!--* * * footer * * *-->
    <footer>
       <h2>Sasha Yamshchikov 2021</h2>
    </footer>

@@ -17,11 +17,13 @@ toggle.addEventListener('click', () => {
 const output = document.querySelector('.pg-password');
 const generateButtonElement = document.querySelector('.generate-btn');
 const copyButtonElement = document.querySelector('.pg-output--copyBtn');
-const lengthElement = document.querySelector('#length');
-const lowersElement = document.querySelector('#lower');
-const uppersElement = document.querySelector('#upper');
-const numbersElement = document.querySelector('#number');
-const symbolsElement = document.querySelector('#symbol');
+const lengthElement = document.getElementById('length');
+const lowersElement = document.getElementById('lower');
+const uppersElement = document.getElementById('upper');
+const numbersElement = document.getElementById('number');
+const symbolsElement = document.getElementById('symbol');
+const fields = document.querySelectorAll('.checkbox')
+const clearButtonElement = document.getElementById('clear');
 
 // - - - - - - - - - - - - -
 
@@ -65,6 +67,8 @@ copyButtonElement.addEventListener('click', () => {
 
 
 })
+
+clearButtonElement.addEventListener('click', clearFields)
 // functions that create new notification div and shows it
 // alert notification
 function createAlert() {
@@ -205,3 +209,10 @@ function charCreator(start, end) {
 // - - - - - - - - - - - - -
 
 
+// Clear Fields 
+
+function clearFields () {
+   output.innerText = ''
+   lengthElement.value = 16
+   fields.forEach(e => e.checked = false)
+}

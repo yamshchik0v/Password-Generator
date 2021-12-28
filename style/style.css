@@ -437,7 +437,8 @@ footer h2 {
   margin: .3rem;
 }
 
-html, body {
+html,
+body {
   font-size: 16px;
 }
 
@@ -545,6 +546,42 @@ body {
   cursor: pointer;
 }
 
+.form-control .clear {
+  width: 14px;
+  height: 14px;
+  border-radius: 0.1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.form-control .clear svg {
+  width: 8px;
+  height: 8px;
+}
+
+.form-control .clear:hover {
+  opacity: .8;
+}
+
+.form-control .clear:active {
+  background: crimson;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.form-control .clear:active path {
+  fill: white;
+}
+
 .pg-generate {
   margin: 0.8rem 0 0 0;
   width: 100%;
@@ -577,4 +614,10 @@ body {
 .generate-btn:active {
   -webkit-transform: scale(95%);
           transform: scale(95%);
+}
+
+@media (max-width: 380px) {
+  .pg-container {
+    margin: 0 10px;
+  }
 }
